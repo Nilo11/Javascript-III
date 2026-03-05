@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisible by 7 Sum</title>
+</head>
+<body>
+
+    <h2>Sum of Numbers (1-200) Divisible by 7</h2>
+    <p>The final sum is: <strong id="result"></strong></p>
+
+    <script>
+        // Initialize the running total
+        let totalSum = 0;
+
+        // Loop from 1 to 200
+        for (let i = 1; i <= 200; i++) {
+            // Check if the number is divisible by 7
+            if (i % 7 === 0) {
+                totalSum += i;
+            }
+        }
+
+        // Output the final sum to the HTML element with id="result"
+        document.getElementById("result").textContent = totalSum;
+    </script>
+
+</body>
+</html>

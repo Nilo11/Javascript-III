@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skipping Multiples</title>
+</head>
+<body>
+
+    <h2>Numbers 1 to 50 (Skipping Multiples of 10)</h2>
+    <div id="output"></div>
+
+    <script>
+        let result = "";
+        const outputDiv = document.getElementById("output");
+
+        for (let i = 1; i <= 50; i++) {
+            // Check if 'i' is a multiple of 10
+            if (i % 10 === 0) {
+                continue; // Skip the rest of the loop
+            }
+            result += i + " ";
+        }
+
+        outputDiv.innerText = result;
+    </script>
+
+</body>
+</html>

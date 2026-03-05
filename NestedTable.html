@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table { border-collapse: collapse; }
+        td { width: 40px; height: 40px; border: 1px solid #ccc; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h2>5x5 Even Multiplication Grid</h2>
+    <table id="grid"></table>
+
+    <script>
+        const table = document.getElementById("grid");
+        let html = "";
+
+        for (let i = 1; i <= 5; i++) {
+            html += "<tr>"; // Start row
+            for (let j = 1; j <= 5; j++) {
+                let product = i * j;
+                
+                // Condition: Only show if product is even
+                if (product % 2 === 0) {
+                    html += `<td>${product}</td>`;
+                } else {
+                    html += "<td> </td>"; // Keep empty for odd results
+                }
+            }
+            html += "</tr>"; // End row
+        }
+
+        table.innerHTML = html;
+    </script>
+
+</body>
+</html>
